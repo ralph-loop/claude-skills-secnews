@@ -9,7 +9,7 @@ Category: $ARGUMENTS
 
 ### Step 1: Fetch Feed Registry
 Use WebFetch to retrieve the feed list from:
-`https://raw.githubusercontent.com/threathunterr/claude-commands-secnews/main/secnews_feeds.md`
+`https://raw.githubusercontent.com/threathunterr/claude-commands-secnews/master/secnews_feeds.md`
 
 ### Step 2: Parse Category
 From the user's arguments, identify which category they want:
