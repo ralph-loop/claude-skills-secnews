@@ -1,4 +1,9 @@
 __pycache__/
+*.pyc
 .venv/
-.gemini/
-!/.gemini/commands/
+.claude/*
+!.claude/commands/
+.omc/
+.pytest_cache/
+.DS_Store
+*.local.json
