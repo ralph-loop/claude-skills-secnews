@@ -190,8 +190,3 @@ We welcome contributions! Help us keep security news flowing:
 - [MITRE ATT&CK Framework](https://attack.mitre.org/)
 - [CISA Alert System](https://www.cisa.gov/news-events/alerts)
 
----
-
-**Repository:** [threathunterr/claude-commands-secnews](https://github.com/threathunterr/claude-commands-secnews)
-**Maintained by:** Security researchers and threat hunters
-**Last Feed Update:** 2026-01-27
