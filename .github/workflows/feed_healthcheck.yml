@@ -1,4 +1,4 @@
-name: SecNews Tester
+name: Feed Healthcheck
 
 on:
   push:
