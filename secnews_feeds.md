@@ -57,6 +57,7 @@ A curated collection of cybersecurity RSS feeds for threat intelligence and secu
 ### Nation-State Threat Research
 * [Palo Alto Networks](https://www.paloaltonetworks.com/blog/rss)
 * [Google Threat Analysis Group](https://blog.google/threat-analysis-group/rss/)
+* [Mandiant (Google Cloud)](https://www.mandiant.com/resources/blog/rss.xml)
 
 ### Threat Actor Intelligence
 * [Cisco Talos](http://feeds.feedburner.com/feedburner/Talos)
@@ -128,5 +129,5 @@ A curated collection of cybersecurity RSS feeds for threat intelligence and secu
 
 ---
 
-*Last Updated: 2026-01-27*
-*Total Feeds: 55+*
+*Last Updated: 2026-01-28*
+*Total Feeds: 56+*
