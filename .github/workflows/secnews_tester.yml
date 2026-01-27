@@ -92,7 +92,7 @@ jobs:
           issue_body = "The following SecNews feed URLs failed the check:\n\n"
           for url in failed_urls:
               issue_body += f"- `{url}`\n"
-          issue_body += "\n@gemini-cli please remediate these broken links."
+          issue_body += "\n\nPlease investigate and fix these broken feed URLs."
 
           with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
               print(f'issue_body<<EOF', file=f)
