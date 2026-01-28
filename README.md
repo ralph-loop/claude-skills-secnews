@@ -1,13 +1,13 @@
 # SecNews - Stay Ahead of Cybersecurity Threats
 
-Instant access to curated cybersecurity news and threat intelligence from 55+ trusted sources. A powerful Claude Code custom command for security professionals, incident responders, and threat hunters.
+Instant access to curated cybersecurity news and threat intelligence from 55+ trusted sources. A powerful Claude Code skill for security professionals, incident responders, and threat hunters.
 
 ## Quick Start
 
 ### Installation
 
 ```bash
-mkdir -p ~/.claude/commands && curl -sSL https://raw.githubusercontent.com/threathunterr/claude-commands-secnews/master/.claude/commands/secnews.md -o ~/.claude/commands/secnews.md
+mkdir -p ~/.claude/skills/secnews && curl -sSL https://raw.githubusercontent.com/threathunterr/claude-commands-secnews/master/.claude/skills/secnews/SKILL.md -o ~/.claude/skills/secnews/SKILL.md
 ```
 
 ### Your First Query
@@ -109,9 +109,9 @@ If you prefer to set up manually:
    cd claude-commands-secnews
    ```
 
-2. Copy the command file:
+2. Copy the skill file:
    ```bash
-   cp .claude/commands/secnews.md ~/.claude/commands/
+   mkdir -p ~/.claude/skills/secnews && cp .claude/skills/secnews/SKILL.md ~/.claude/skills/secnews/
    ```
 
 ### Running Tests Locally
@@ -150,9 +150,9 @@ GitHub Actions validates feeds daily:
 
 ## Troubleshooting
 
-**Command not found?**
+**Skill not found?**
 - Restart your Claude Code application after installation
-- Verify the file exists: `ls ~/.claude/commands/secnews.md`
+- Verify the file exists: `ls ~/.claude/skills/secnews/SKILL.md`
 
 **No results or connection timeout?**
 - Some feeds may be temporarily unavailable

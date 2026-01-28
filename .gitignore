@@ -2,7 +2,7 @@ __pycache__/
 *.pyc
 .venv/
 .claude/*
-!.claude/commands/
+!.claude/skills/
 .omc/
 .pytest_cache/
 .DS_Store
