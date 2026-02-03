@@ -7,7 +7,7 @@ Instant access to curated cybersecurity news and threat intelligence from 55+ tr
 ### Installation
 
 ```bash
-mkdir -p ~/.claude/skills/secnews && curl -sSL https://raw.githubusercontent.com/threathunterr/claude-commands-secnews/master/.claude/skills/secnews/SKILL.md -o ~/.claude/skills/secnews/SKILL.md
+mkdir -p ~/.claude/skills/secnews && curl -sSL https://raw.githubusercontent.com/ralph-loop/claude-commands-secnews/master/.claude/skills/secnews/SKILL.md -o ~/.claude/skills/secnews/SKILL.md
 ```
 
 ### Your First Query
