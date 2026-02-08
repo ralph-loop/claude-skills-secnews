@@ -70,12 +70,10 @@ A curated collection of cybersecurity RSS feeds for threat intelligence and secu
 
 ### Threat Intelligence Platforms
 * [EclecticIQ](https://blog.eclecticiq.com/rss.xml)
-* [Anomali](https://www.anomali.com/site/blog-rss)
 * [SOC Prime](https://socprime.com/blog/feed/)
 
 ### General Threat Intelligence
 * [Threatpost](https://threatpost.com/feed/)
-* [IBM Security Intelligence](https://securityintelligence.com/feed/)
 * [Bitdefender Labs](https://www.bitdefender.com/blog/api/rss/labs/)
 
 ---
@@ -83,11 +81,11 @@ A curated collection of cybersecurity RSS feeds for threat intelligence and secu
 ## Government
 
 ### Official Advisories
+* [CISA Cybersecurity Advisories](https://www.cisa.gov/cybersecurity-advisories/all.xml)
+* [CISA News](https://www.cisa.gov/news.xml)
 * [NIST Cybersecurity Insights](https://www.nist.gov/blogs/cybersecurity-insights/rss.xml)
 * [CIS Advisories](https://www.cisecurity.org/feed/advisories)
 * [SANS Internet Storm Center](https://isc.sans.edu/rssfeed_full.xml)
-
-<!-- Note: CISA retired its RSS feeds in May 2025. Subscribe to email notifications at cisa.gov/subscribe -->
 
 ---
 
@@ -103,11 +101,9 @@ A curated collection of cybersecurity RSS feeds for threat intelligence and secu
 * [Troy Hunt](https://www.troyhunt.com/rss/)
 
 ### Vendor Security Blogs
-* [Sophos News](https://news.sophos.com/en-us/feed/)
 * [Cisco Security](https://blogs.cisco.com/security/feed)
 * [Cloudflare Security](https://blog.cloudflare.com/tag/security/rss)
 * [Google Online Security](https://googleonlinesecurity.blogspot.com/atom.xml)
-* [McAfee Labs](https://www.mcafee.com/blogs/feed)
 * [Broadcom Symantec](https://sed-cms.broadcom.com/rss/v1/blogs/rss.xml)
 
 ---
@@ -116,7 +112,7 @@ A curated collection of cybersecurity RSS feeds for threat intelligence and secu
 
 * [/r/netsec](http://www.reddit.com/r/netsec/.rss)
 * [/r/cybersecurity](https://www.reddit.com/r/cybersecurity/.rss)
-* [SpecterOps](https://posts.specterops.io/feed)
+* [SpecterOps](https://specterops.io/feed/)
 
 ---
 
@@ -125,9 +121,9 @@ A curated collection of cybersecurity RSS feeds for threat intelligence and secu
 * [SensePost](https://sensepost.com/rss.xml)
 * [Quarkslab](https://blog.quarkslab.com/feeds/all.rss.xml)
 * [Fox-IT](https://blog.fox-it.com/feed/)
-* [Signals Corps](https://www.signalscorps.com/feed.xml)
+* [dogesec](https://www.dogesec.com/feed.xml)
 
 ---
 
-*Last Updated: 2026-01-28*
-*Total Feeds: 56+*
+*Last Updated: 2026-02-09*
+*Total Feeds: 55*

@@ -1,13 +1,13 @@
 # SecNews - Stay Ahead of Cybersecurity Threats
 
-Instant access to curated cybersecurity news and threat intelligence from 55+ trusted sources. A powerful Claude Code skill for security professionals, incident responders, and threat hunters.
+Instant access to curated cybersecurity news and threat intelligence from 57+ trusted sources. A powerful Claude Code skill for security professionals, incident responders, and threat hunters.
 
 ## Quick Start
 
 ### Installation
 
 ```bash
-mkdir -p ~/.claude/skills/secnews && curl -sSL https://raw.githubusercontent.com/ralph-loop/claude-commands-secnews/master/.claude/skills/secnews/SKILL.md -o ~/.claude/skills/secnews/SKILL.md
+mkdir -p ~/.claude/skills/secnews && curl -sSL https://raw.githubusercontent.com/ralph-loop/claude-skills-secnews/master/.claude/skills/secnews/SKILL.md -o ~/.claude/skills/secnews/SKILL.md
 ```
 
 ### Your First Query
@@ -34,6 +34,9 @@ Fetch news by category or get everything:
 /secnews apt                  # Advanced Persistent Threats
 /secnews threat-intel         # Threat intelligence reports
 /secnews government           # Official advisories and alerts
+/secnews general              # Major security publications and vendor blogs
+/secnews community            # Community-driven security content
+/secnews red-team             # Offensive security and red team research
 ```
 
 Each command fetches the latest articles from the last 7 days, automatically prioritizing critical and zero-day information.
@@ -49,10 +52,13 @@ Each command fetches the latest articles from the last 7 days, automatically pri
 | **apt** | Nation-state actors, APT operations | Palo Alto Networks, Google TAG, Cisco Talos, Checkpoint Research |
 | **threat-intel** | General threat intelligence | Threatpost, IBM Security, EclecticIQ, Anomali, Bitdefender Labs |
 | **government** | Official advisories and alerts | NIST, CIS, SANS ISC |
+| **general** | Major security publications and vendor blogs | Schneier on Security, WIRED, Dark Reading, Sophos, Cloudflare |
+| **community** | Community-driven security content | Reddit r/netsec, r/cybersecurity, SpecterOps |
+| **red-team** | Offensive security and red team research | SensePost, Quarkslab, Fox-IT, Signals Corps |
 
 ## Feed Sources
 
-SecNews aggregates from **55+ premium security sources** including:
+SecNews aggregates from **57+ premium security sources** including:
 
 **Government & Compliance**
 - NIST Cybersecurity Insights
@@ -87,14 +93,14 @@ SecNews aggregates from **55+ premium security sources** including:
 - SensePost
 - Quarkslab
 
-All feeds are curated and tested daily. See the complete feed list in [`secnews_feeds.md`](./secnews_feeds.md).
+All feeds are curated and tested weekly. See the complete feed list in [`secnews_feeds.md`](./secnews_feeds.md).
 
 ## Features
 
-- **55+ Trusted Sources** - Carefully curated feeds from government agencies, security vendors, and independent researchers
-- **9 Categories** - Malware, Ransomware, Vulnerabilities, Phishing, APT, Threat-Intel, Government, General, Community
+- **57+ Trusted Sources** - Carefully curated feeds from government agencies, security vendors, and independent researchers
+- **10 Categories** - Malware, Ransomware, Vulnerabilities, Phishing, APT, Threat-Intel, Government, General, Community, Red Team
 - **Real-Time Updates** - Articles from the last 7 days with critical items highlighted
-- **Daily Validation** - Automated testing via GitHub Actions ensures all feeds stay operational
+- **Weekly Validation** - Automated testing via GitHub Actions ensures all feeds stay operational
 - **Auto-Remediation** - Broken feeds automatically flagged for quick restoration
 
 ## Development & Contributing
@@ -105,8 +111,8 @@ If you prefer to set up manually:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/threathunterr/claude-commands-secnews.git
-   cd claude-commands-secnews
+   git clone https://github.com/ralph-loop/claude-skills-secnews.git
+   cd claude-skills-secnews
    ```
 
 2. Copy the skill file:
@@ -142,10 +148,10 @@ Requirements for new feeds:
 
 ### CI/CD Pipeline
 
-GitHub Actions validates feeds daily:
-- Checks all 55+ feeds for accessibility
+GitHub Actions validates feeds weekly:
+- Checks all 57+ feeds for accessibility
 - Auto-creates issues for broken feeds
-- Runs on every push and pull request
+- Runs on every push, pull request, and weekly on Sundays
 - Maintains feed health and uptime
 
 ## Troubleshooting

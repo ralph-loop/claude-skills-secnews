@@ -1,6 +1,6 @@
 ---
 name: secnews
-description: Cybersecurity threat news reporter. Fetches and summarizes the latest security news from 55+ trusted sources by category (malware, phishing, vulnerabilities, ransomware, apt, threat-intel, government, or all).
+description: Cybersecurity threat news reporter. Fetches and summarizes the latest security news from 57+ trusted sources by category (malware, phishing, vulnerabilities, ransomware, apt, threat-intel, government, general, community, red-team, or all).
 argument-hint: [category]
 ---
 
@@ -15,7 +15,7 @@ Category: $ARGUMENTS
 
 ### Step 1: Fetch Feed Registry
 Use WebFetch to retrieve the feed list from:
-`https://raw.githubusercontent.com/threathunterr/claude-commands-secnews/master/secnews_feeds.md`
+`https://raw.githubusercontent.com/ralph-loop/claude-skills-secnews/master/secnews_feeds.md`
 
 ### Step 2: Parse Category
 From the user's arguments, identify which category they want:
@@ -26,6 +26,9 @@ From the user's arguments, identify which category they want:
 - `apt` - Advanced Persistent Threats and nation-state actors
 - `threat-intel` - General threat intelligence
 - `government` - Official advisories (CISA, CERT, NIST)
+- `general` - Major security publications and vendor blogs
+- `community` - Community-driven security content (Reddit, SpecterOps)
+- `red-team` - Offensive security and red team research
 - `all` - Summary from all categories
 
 If no category specified or invalid, default to `all`.
