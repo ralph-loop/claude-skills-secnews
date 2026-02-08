@@ -64,51 +64,22 @@ jobs:
 
       - name: Parse failed URLs and create issue body
         id: parse_failures
-        run: |
-          cat << EOF > parse_report.py
-          import xml.etree.ElementTree as ET
-          import re
-          from urllib.parse import unquote
-          import os
-
-          def parse_junit_report(report_path):
-              """Parses a JUnit XML report and returns a list of failed URLs."""
-              if not os.path.exists(report_path):
-                  return []
-              try:
-                  tree = ET.parse(report_path)
-                  root = tree.getroot()
-                  failed_urls = []
-                  for testcase in root.iter('testcase'):
-                      if testcase.find('failure') is not None:
-                          match = re.search(r'\[(.*?)\]', testcase.attrib.get('name', ''))
-                          if match:
-                              failed_urls.append(unquote(match.group(1)))
-                  return sorted(list(set(failed_urls)))
-              except ET.ParseError:
-                  return []
-
-          failed_urls = parse_junit_report('report.xml')
-          issue_body = "The following SecNews feed URLs failed the check:\n\n"
-          for url in failed_urls:
-              issue_body += f"- `{url}`\n"
-          issue_body += "\n\nPlease investigate and fix these broken feed URLs."
-
-          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
-              print(f'issue_body<<EOF', file=f)
-              print(issue_body, file=f)
-              print(f'EOF', file=f)
-
-          EOF
-          python parse_report.py
+        run: python .github/scripts/parse_report.py
 
       - name: Create GitHub Issue
-        if: steps.parse_failures.outputs.issue_body != ''
+        if: steps.parse_failures.outputs.has_failures == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_BODY: ${{ steps.parse_failures.outputs.issue_body }}
         run: |
-          gh issue create \
-            --title "Remediate Broken SecNews Feed URLs" \
-            --body "$ISSUE_BODY" \
-            --label "bug"
+          # Check for existing open issue with same title
+          existing=$(gh issue list --state open --search "Remediate Broken SecNews Feed URLs" --json number --jq '.[0].number' 2>/dev/null || echo "")
+          if [ -n "$existing" ]; then
+            echo "Updating existing issue #$existing"
+            gh issue comment "$existing" --body "$ISSUE_BODY"
+          else
+            gh issue create \
+              --title "Remediate Broken SecNews Feed URLs" \
+              --body "$ISSUE_BODY" \
+              --label "bug"
+          fi
