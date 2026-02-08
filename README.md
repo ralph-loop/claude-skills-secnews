@@ -1,6 +1,6 @@
 # SecNews - Stay Ahead of Cybersecurity Threats
 
-Instant access to curated cybersecurity news and threat intelligence from 57+ trusted sources. A powerful Claude Code skill for security professionals, incident responders, and threat hunters.
+Instant access to curated cybersecurity news and threat intelligence from 55 trusted sources. A powerful Claude Code skill for security professionals, incident responders, and threat hunters.
 
 ## Quick Start
 
@@ -58,7 +58,7 @@ Each command fetches the latest articles from the last 7 days, automatically pri
 
 ## Feed Sources
 
-SecNews aggregates from **57+ premium security sources** including:
+SecNews aggregates from **55 premium security sources** including:
 
 **Government & Compliance**
 - NIST Cybersecurity Insights
@@ -93,15 +93,13 @@ SecNews aggregates from **57+ premium security sources** including:
 - SensePost
 - Quarkslab
 
-All feeds are curated and tested weekly. See the complete feed list in [`secnews_feeds.md`](./secnews_feeds.md).
+All feeds are curated. See the complete feed list in [`secnews_feeds.md`](./secnews_feeds.md).
 
 ## Features
 
-- **57+ Trusted Sources** - Carefully curated feeds from government agencies, security vendors, and independent researchers
+- **55 Trusted Sources** - Carefully curated feeds from government agencies, security vendors, and independent researchers
 - **10 Categories** - Malware, Ransomware, Vulnerabilities, Phishing, APT, Threat-Intel, Government, General, Community, Red Team
 - **Real-Time Updates** - Articles from the last 7 days with critical items highlighted
-- **Weekly Validation** - Automated testing via GitHub Actions ensures all feeds stay operational
-- **Auto-Remediation** - Broken feeds automatically flagged for quick restoration
 
 ## Development & Contributing
 
@@ -120,16 +118,6 @@ If you prefer to set up manually:
    mkdir -p ~/.claude/skills/secnews && cp .claude/skills/secnews/SKILL.md ~/.claude/skills/secnews/
    ```
 
-### Running Tests Locally
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run feed validation
-pytest tests/test_secnews_feeds.py -v
-```
-
 ### Adding New Feeds
 
 1. Edit [`secnews_feeds.md`](./secnews_feeds.md)
@@ -145,14 +133,6 @@ Requirements for new feeds:
 - Valid RSS or Atom feed format
 - Relevant to the category
 - Ideally, no more than 100% spam rate
-
-### CI/CD Pipeline
-
-GitHub Actions validates feeds weekly:
-- Checks all 57+ feeds for accessibility
-- Auto-creates issues for broken feeds
-- Runs on every push, pull request, and weekly on Sundays
-- Maintains feed health and uptime
 
 ## Troubleshooting
 
@@ -188,7 +168,6 @@ We welcome contributions! Help us keep security news flowing:
 - Ensure feeds are RSS/Atom compliant
 - Verify feeds are active and well-maintained
 - Add feeds to the appropriate category
-- Run tests locally before submitting
 
 ## Related Resources
 
